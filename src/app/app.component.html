@@ -1,0 +1,63 @@
+<div>
+
+
+<h1> {{title}}</h1>
+<hr>
+<demo></demo>
+
+<input (keyup.enter)="action($event.target.value)"/><br><br>
+<button (click)="mtd()">CLICKME</button><br><br>
+
+<input #name (keyup.enter)="t()"/>
+<hr>
+
+Name: {{name.value}}
+
+<hr>
+
+
+  <button (click)="data=(data==true?false:true)">Toggle</button><br><Br>
+
+  <div *ngIf="data">
+    <h2>Hello World !</h2>
+    </div>
+
+</div>
+
+<hr>
+
+<div> Months
+<select>
+
+<option *ngFor= "let item of months; index as i">{{i+1}} {{item}}</option>
+
+
+
+</select>
+
+<button  (click)="mtds()">Click</button>
+
+<hr>
+
+<div>
+
+<table class="table table-bordered table-striped">
+  <tr>
+  <th>NO</th>
+  <th>Name</th>
+  <th>Class</th>
+</tr>
+  <tr *ngFor="let item of records;index as i">
+
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.class}}</td>
+
+
+
+  </tr>
+</table>
+
+</div>
+
+</div>
